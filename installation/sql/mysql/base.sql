@@ -712,6 +712,7 @@ CREATE TABLE IF NOT EXISTS `#__tags` (
   `checked_out_time` datetime,
   `access` int(10) unsigned NOT NULL DEFAULT 0,
   `params` text NOT NULL,
+  `page_title` varchar(1024) NOT NULL DEFAULT '' COMMENT 'Browser page title',
   `metadesc` varchar(1024) NOT NULL COMMENT 'The meta description for the page.',
   `metakey` varchar(1024) NOT NULL DEFAULT '' COMMENT 'The keywords for the page.',
   `metadata` varchar(2048) NOT NULL COMMENT 'JSON encoded metadata properties.',
@@ -741,8 +742,8 @@ CREATE TABLE IF NOT EXISTS `#__tags` (
 -- Dumping data for table `#__tags`
 --
 
-INSERT INTO `#__tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `created_by_alias`, `modified_user_id`, `modified_time`, `images`, `urls`, `hits`, `language`, `version`) VALUES
-(1, 0, 0, 1, 0, '', 'ROOT', 'root', '', '', 1, 0, NULL, 1, '', '', '', '', 42, CURRENT_TIMESTAMP(), '', 42, CURRENT_TIMESTAMP(), '', '', 0, '*', 1);
+INSERT INTO `#__tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `page_title`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `created_by_alias`, `modified_user_id`, `modified_time`, `images`, `urls`, `hits`, `language`, `version`) VALUES
+(1, 0, 0, 1, 0, '', 'ROOT', 'root', '', '', 1, 0, NULL, 1, '', '', '', '', '', 42, CURRENT_TIMESTAMP(), '', 42, CURRENT_TIMESTAMP(), '', '', 0, '*', 1);
 
 -- --------------------------------------------------------
 
