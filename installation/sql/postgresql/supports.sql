@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS "#__categories" (
   "checked_out_time" timestamp without time zone,
   "access" bigint DEFAULT 0 NOT NULL,
   "params" text,
-  "page_title" varchar(1024) NOT NULL DEFAULT '',
+  "page_title" varchar(1024) DEFAULT '' NOT NULL,
   "metadesc" varchar(1024) DEFAULT '' NOT NULL,
   "metakey" varchar(1024) DEFAULT '' NOT NULL,
   "metadata" varchar(2048) DEFAULT '' NOT NULL,
