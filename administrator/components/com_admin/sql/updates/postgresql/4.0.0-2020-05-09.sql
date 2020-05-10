@@ -106,3 +106,21 @@ ALTER TABLE "#__tags"
     ALTER COLUMN "metadata" TYPE VARCHAR(2048) COLLATE 'utf8mb4_unicode_ci',
     ALTER COLUMN "metadata" SET NOT NULL,
     ALTER COLUMN "metadata" SET DEFAULT '';
+
+UPDATE "#__banners"
+SET "metakey" = ''
+WHERE "metakey" IS NULL;
+
+ALTER TABLE "#__banners"
+    ALTER COLUMN "metakey" TYPE VARCHAR(1024) COLLATE 'utf8mb4_unicode_ci',
+    ALTER COLUMN "metakey" SET NOT NULL,
+    ALTER COLUMN "metakey" SET DEFAULT '';
+
+UPDATE "#__banner_clients"
+SET "metakey" = ''
+WHERE "metakey" IS NULL;
+
+ALTER TABLE "#__banner_clients"
+    ALTER COLUMN "metakey" TYPE VARCHAR(1024) COLLATE 'utf8mb4_unicode_ci',
+    ALTER COLUMN "metakey" SET NOT NULL,
+    ALTER COLUMN "metakey" SET DEFAULT '';

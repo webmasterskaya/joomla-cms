@@ -82,3 +82,17 @@ ALTER TABLE `#__tags`
     MODIFY `metakey` VARCHAR(1024) NOT NULL DEFAULT '' COLLATE 'utf8mb4_unicode_ci' AFTER `modified_by`,
     MODIFY `metadesc` VARCHAR(1024) NOT NULL DEFAULT '' COLLATE 'utf8mb4_unicode_ci' AFTER `page_title`,
     MODIFY `metadata` VARCHAR(2048) NOT NULL DEFAULT '' COLLATE 'utf8mb4_unicode_ci' AFTER `page_title`;
+
+UPDATE `#__banners`
+SET `metakey` = ''
+WHERE `metakey` IS NULL;
+
+ALTER TABLE `#__banners`
+    MODIFY `metakey` VARCHAR(1024) NOT NULL DEFAULT '' COLLATE 'utf8mb4_unicode_ci' AFTER `modified_by`;
+
+UPDATE `#__banner_clients`
+SET `metakey` = ''
+WHERE `metakey` IS NULL;
+
+ALTER TABLE `#__banner_clients`
+    MODIFY `metakey` VARCHAR(1024) NOT NULL DEFAULT '' COLLATE 'utf8mb4_unicode_ci' AFTER `modified_by`;
