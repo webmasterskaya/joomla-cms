@@ -730,7 +730,7 @@ CREATE TABLE IF NOT EXISTS "#__tags" (
   "checked_out_time" timestamp without time zone,
   "access" bigint DEFAULT 0 NOT NULL,
   "params" text NOT NULL,
-  "page_title" varchar(1024) DEFAULT '' NOT NULL,
+  "browser_title" varchar(1024) DEFAULT '' NOT NULL,
   "metadesc" varchar(1024) DEFAULT '' NOT NULL,
   "metakey" varchar(1024) DEFAULT '' NOT NULL,
   "metadata" varchar(2048) DEFAULT '' NOT NULL,
@@ -760,7 +760,7 @@ CREATE INDEX "#__tags_idx_language" ON "#__tags" ("language");
 -- Dumping data for table `#__tags`
 --
 
-INSERT INTO "#__tags" ("id", "parent_id", "lft", "rgt", "level", "path", "title", "alias", "note", "description", "published", "checked_out", "checked_out_time", "access", "params", "page_title", "metadesc", "metakey", "metadata", "created_user_id", "created_time", "created_by_alias", "modified_user_id", "modified_time", "images", "urls", "hits", "language", "version") VALUES
+INSERT INTO "#__tags" ("id", "parent_id", "lft", "rgt", "level", "path", "title", "alias", "note", "description", "published", "checked_out", "checked_out_time", "access", "params", "browser_title", "metadesc", "metakey", "metadata", "created_user_id", "created_time", "created_by_alias", "modified_user_id", "modified_time", "images", "urls", "hits", "language", "version") VALUES
 (1, 0, 0, 1, 0, '', 'ROOT', 'root', '', '', 1, 0, NULL, 1, '', '', '', '', '', 42, CURRENT_TIMESTAMP, '', 42, CURRENT_TIMESTAMP, '', '',  0, '*', 1);
 
 SELECT setval('#__tags_id_seq', 2, false);

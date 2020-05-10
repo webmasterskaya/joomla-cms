@@ -29,7 +29,7 @@ $fieldSets = $form->getFieldsets('metadata');
 	// Include the real fields in this panel.
 	if ($name === 'jmetadata')
 	{
-		echo $form->renderField('page_title');
+		echo $form->renderField('browser_title');
 		echo $form->renderField('metadesc');
 		echo $form->renderField('metakey');
 	}

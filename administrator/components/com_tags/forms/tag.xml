@@ -118,7 +118,7 @@
 	/>
 
 	<field
-		name="page_title"
+		name="browser_title"
 		type="text"
 		label="JFIELD_BROWSER_PAGE_TITLE_LABEL"
 		size="25"
