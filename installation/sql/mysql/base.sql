@@ -394,7 +394,7 @@ CREATE TABLE IF NOT EXISTS `#__languages` (
   `sef` varchar(50) NOT NULL,
   `image` varchar(50) NOT NULL,
   `description` varchar(512) NOT NULL,
-  `metakey` text,
+  `metakey` varchar(1024) NOT NULL DEFAULT '',
   `metadesc` text NOT NULL,
   `sitename` varchar(1024) NOT NULL DEFAULT '',
   `published` int(11) NOT NULL DEFAULT 0,

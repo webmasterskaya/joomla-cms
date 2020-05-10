@@ -124,3 +124,12 @@ ALTER TABLE "#__banner_clients"
     ALTER COLUMN "metakey" TYPE VARCHAR(1024) COLLATE 'utf8mb4_unicode_ci',
     ALTER COLUMN "metakey" SET NOT NULL,
     ALTER COLUMN "metakey" SET DEFAULT '';
+
+UPDATE "#__languages"
+SET "metakey" = ''
+WHERE "metakey" IS NULL;
+
+ALTER TABLE "#__languages"
+    ALTER COLUMN "metakey" TYPE VARCHAR(1024) COLLATE 'utf8mb4_unicode_ci',
+    ALTER COLUMN "metakey" SET NOT NULL,
+    ALTER COLUMN "metakey" SET DEFAULT '';

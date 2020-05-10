@@ -96,3 +96,10 @@ WHERE `metakey` IS NULL;
 
 ALTER TABLE `#__banner_clients`
     MODIFY `metakey` VARCHAR(1024) NOT NULL DEFAULT '' COLLATE 'utf8mb4_unicode_ci' AFTER `modified_by`;
+
+UPDATE `#__languages`
+SET `metakey` = ''
+WHERE `metakey` IS NULL;
+
+ALTER TABLE `#__languages`
+    MODIFY `metakey` VARCHAR(1024) NOT NULL DEFAULT '' COLLATE 'utf8mb4_unicode_ci' AFTER `modified_by`;
